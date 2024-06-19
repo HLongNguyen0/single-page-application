@@ -1,0 +1,35 @@
+:host {
+    display: block;
+
+    .app {
+        &__container {
+            position: relative;
+
+            width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+
+            background-color: #fff;
+
+            overflow: hidden;
+        }
+    }
+
+    .page {
+        &__change {
+            position: fixed;
+            top: 0;
+
+            width: 5vw;
+            height: 100vh;
+
+            cursor: pointer;
+
+            z-index: 1;
+
+            &:hover {
+                background-color: rgba($color: #fff, $alpha: 0.1);
+            }
+        }
+    }
+}

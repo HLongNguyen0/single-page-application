@@ -1,1 +1,23 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<router-outlet></router-outlet>
+<div class="page__change" [ngStyle]="{left: 0}" (click)="changePage(false)"></div>
+<div class="app__container">
+    <app-introduction 
+        *ngIf="page.currPage >= 1 - 1 || page.currPage <= 1 + 1"
+        [page]="page"
+        [pageIndex]="1"
+        [ngStyle]="{
+            left: pagePosition(1),
+            opacity: page.currPage !== 1 ? 0 : 1
+            }"
+    ></app-introduction>
+    <app-definition
+        *ngIf="page.currPage >= 2 - 1 || page.currPage <= 2 + 1"
+        [page]="page"
+        [pageIndex]="2"
+        [ngStyle]="{
+            left: pagePosition(2),
+            opacity: page.currPage !== 2 ? 0 : 1
+            }"
+    ></app-definition>
+</div>
+<div class="page__change" [ngStyle]="{right: 0}" (click)="changePage(true)"></div>

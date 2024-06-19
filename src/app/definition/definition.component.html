@@ -1,0 +1,23 @@
+<div class="definition"
+    [ngStyle]="{
+        transform: page.currPage === pageIndex ? 'scale(1)' : 'scale(0.95)',
+        transition: page.currPage !== pageIndex ? 'transform 200ms linear' : 'transform 200ms linear 600ms'
+        }">
+    <div class="definition__container">
+        <div class="definition__glasses">
+            <div class="definition__elem" [ngStyle]="{background: 'blue'}">
+                <h2 class="definition__elem__title">Single Page Application</h2>
+                <p class="definition__elem__text">{{spaText}}</p>
+            </div>
+        </div>
+        <div class="definition__glasses2">
+            <div></div>
+        </div>
+        <div class="definition__glasses">
+            <div class="definition__elem" [ngStyle]="{background: 'red'}">
+                <h2 class="definition__elem__title">Traditional Web Application</h2>
+                <p class="definition__elem__text">{{tpatext}}</p>
+            </div>
+        </div>
+    </div>
+</div>

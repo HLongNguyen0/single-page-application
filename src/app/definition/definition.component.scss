@@ -1,0 +1,67 @@
+:host {
+    position: absolute;
+    top: 0;
+
+    display: block;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: left 400ms linear 200ms, opacity 150ms linear 350ms;
+
+    .definition {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+    
+        background-color: #000;
+
+        transition: transform 200ms linear;
+    
+        &__container {
+            display: flex;
+        }
+
+        &__glasses {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 30vw;
+            height: 40vh;
+            border: 3vh solid #fff;
+            border-radius: 2vh;
+        }
+
+        &__glasses2 {
+            width: 8vw;
+            height: 40vh;
+            padding-top: 8vh;
+
+            div {
+                height: 4vh;
+                background-color: #fff;
+            }
+        }
+
+        &__elem {
+            width: 90%;
+            height: 90%;
+            padding: 2vh;
+            border-radius: 2vh;
+
+            color: #fff;
+
+            &__title {
+                text-align: center;
+                font-size: 2.5vh;
+            }
+            &__text {
+                font-size: 2vh;
+            }
+        }
+    }
+}
