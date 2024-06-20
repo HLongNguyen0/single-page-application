@@ -1,23 +1,66 @@
-<div class="definition"
-    [ngStyle]="{
-        transform: page.currPage === pageIndex ? 'scale(1)' : 'scale(0.95)',
-        transition: page.currPage !== pageIndex ? 'transform 200ms linear' : 'transform 200ms linear 600ms'
-        }">
-    <div class="definition__container">
-        <div class="definition__glasses">
-            <div class="definition__elem" [ngStyle]="{background: 'blue'}">
-                <h2 class="definition__elem__title">Single Page Application</h2>
-                <p class="definition__elem__text">{{spaText}}</p>
-            </div>
+<div
+  class="difference"
+  [ngStyle]="{
+    transform: page.currPage === pageIndex ? 'scale(1)' : 'scale(0.95)',
+    transition: page.currPage !== pageIndex ? 'transform 200ms linear' : 'transform 200ms linear 600ms'
+  }"
+>
+  <div class="difference__container">
+    <div class="difference__glasses">
+      <div class="difference__elem difference__elem--blue">
+        <div class="difference__example difference__example--spa">
+          <div class="difference__example__header">
+            <span *ngFor="let item of spaExample.header.arr" (click)="onHeaderClick('spa', item)">{{ item }}</span>
+          </div>
+          <div class="difference__example__container" *ngIf="spaExample.header.current === 0">Images</div>
+          <div class="difference__example__container" *ngIf="spaExample.header.current !== 0">
+            <img
+              class="difference__example__img"
+              *ngIf="!spaLoader"
+              [src]="spaSrc"
+              alt="images"
+              [ngStyle]="{ border: '1vh solid ' + colorPalete[(spaExample.header.current - 1) * 3 + spaExample.img.current] }"
+            />
+            <span class="difference__example__text" *ngIf="!spaLoader" (click)="onTextClick('spa')"
+              >{{ spaExample.img.text[spaExample.img.current] }}
+            </span>
+          </div>
         </div>
-        <div class="definition__glasses2">
-            <div></div>
+        <div class="difference__definition difference__definition--blue" [ngStyle]="{ opacity: example ? 0 : 1, 'z-index': example ? -1 : 1 }">
+          <h2 class="difference__definition__title">Single Page Application</h2>
+          <p class="difference__definition__text">{{ spaText }}</p>
         </div>
-        <div class="definition__glasses">
-            <div class="definition__elem" [ngStyle]="{background: 'red'}">
-                <h2 class="definition__elem__title">Traditional Web Application</h2>
-                <p class="definition__elem__text">{{tpatext}}</p>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="difference__glasses2">
+      <div (click)="example = !example"></div>
+    </div>
+    <div class="difference__glasses">
+      <div
+        class="difference__elem difference__elem--red"
+        [ngStyle]="{
+          border:
+            '1vh solid ' +
+            (!example || tpaExample.header.current === 0 || tpaLoader
+              ? 'red'
+              : colorPalete[(tpaExample.header.current - 1) * 3 + tpaExample.img.current])
+        }"
+      >
+        <div class="difference__example difference__example--tpa" *ngIf="!tpaLoader">
+          <div class="difference__example__header">
+            <span *ngFor="let item of tpaExample.header.arr" (click)="onHeaderClick('tpa', item)">{{ item }}</span>
+          </div>
+          <div class="difference__example__container" *ngIf="tpaExample.header.current === 0">Images</div>
+          <div class="difference__example__container" *ngIf="tpaExample.header.current !== 0">
+            <img class="difference__example__img" [src]="tpaSrc" alt="images" />
+            <span class="difference__example__text" (click)="onTextClick('tpa')">{{ tpaExample.img.text[tpaExample.img.current] }} </span>
+          </div>
+        </div>
+        <div class="difference__definition difference__definition--red" [ngStyle]="{ opacity: example ? 0 : 1, 'z-index': example ? -1 : 1 }">
+          <h2 class="difference__definition__title">Traditional Web Application</h2>
+          <p class="difference__definition__text">{{ tpaText }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

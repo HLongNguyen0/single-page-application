@@ -1,6 +1,7 @@
 {
   "name": "single-page-application",
   "$schema": "node_modules/nx/schemas/project-schema.json",
+  "assets": ["./assets"],
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "./src",
@@ -19,7 +20,7 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "public"
+            "input": "assets"
           }
         ],
         "styles": ["./src/styles.scss"],

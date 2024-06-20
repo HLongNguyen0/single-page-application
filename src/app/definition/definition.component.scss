@@ -1,67 +1,180 @@
 :host {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 
-    display: block;
+  display: block;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    transition: left 400ms linear 200ms, opacity 150ms linear 350ms;
+  transition: left 400ms linear 200ms, opacity 150ms linear 350ms;
 
-    .definition {
+  .difference {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000;
+
+    transition: transform 200ms linear;
+
+    &__container {
+      display: flex;
+    }
+
+    &__glasses {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 30vw;
+      height: 40vh;
+      border: 3vh solid #fff;
+      border-radius: 2vh;
+
+      overflow: hidden;
+    }
+
+    &__glasses2 {
+      width: 8vw;
+      height: 40vh;
+      padding-top: 8vh;
+
+      div {
+        height: 4vh;
+        background-color: #fff;
+
+        cursor: pointer;
+      }
+    }
+
+    &__elem {
+      position: relative;
+
+      width: 90%;
+      height: 90%;
+      border-radius: 2vh;
+
+      color: #fff;
+
+      &--blue {
+        padding: 2vh;
+        background-color: blue;
+      }
+      &--red {
+        padding: 1vh;
+        background-color: red;
+      }
+    }
+
+    &__definition {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 2vh;
+
+      transition: all 400ms linear;
+
+      &--blue {
+        padding: 2vh;
+        background-color: blue;
+      }
+      &--red {
+        padding: 1vh;
+        background-color: red;
+      }
+
+      &__title {
+        text-align: center;
+        font-size: 2.5vh;
+      }
+      &__text {
+        font-size: 2vh;
+      }
+    }
+
+    &__example {
+      width: 100%;
+      height: 100%;
+
+      &__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 100%;
+        height: 16%;
+        padding: 1vw 0;
+        border-radius: 2vh;
+
+        background-color: #fff;
+        color: #000;
+
+        span {
+          padding: 1vw 2vh;
+          font-size: 2vh;
+          cursor: pointer;
+
+          transition: transform 100ms linear;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &__container {
+        position: relative;
+
         display: flex;
         justify-content: center;
         align-items: center;
 
         width: 100%;
+        height: 80%;
+        margin-top: 4%;
+        border-radius: 2vh;
+
+        background-color: #fff;
+        color: #000;
+        text-align: center;
+      }
+
+      &__img {
+        width: 50%;
         height: 100%;
-    
-        background-color: #000;
+      }
+      &__text {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
 
-        transition: transform 200ms linear;
-    
-        &__container {
-            display: flex;
-        }
+        display: block;
 
-        &__glasses {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        width: 50%;
+        padding: 2vh 0;
 
-            width: 30vw;
-            height: 40vh;
-            border: 3vh solid #fff;
-            border-radius: 2vh;
-        }
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        color: #fff;
+        text-align: center;
+        font-size: 2vh;
 
-        &__glasses2 {
-            width: 8vw;
-            height: 40vh;
-            padding-top: 8vh;
+        cursor: pointer;
 
-            div {
-                height: 4vh;
-                background-color: #fff;
-            }
-        }
+        transform: translateX(-50%);
 
-        &__elem {
-            width: 90%;
-            height: 90%;
-            padding: 2vh;
-            border-radius: 2vh;
-
-            color: #fff;
-
-            &__title {
-                text-align: center;
-                font-size: 2.5vh;
-            }
-            &__text {
-                font-size: 2vh;
-            }
-        }
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
     }
+  }
 }

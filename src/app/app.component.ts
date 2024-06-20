@@ -4,29 +4,27 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { NgIf, NgStyle } from '@angular/common';
 import { DefinitionComponent } from './definition/definition.component';
 
-
 @Component({
   standalone: true,
-  imports: [ RouterModule, NgIf, NgStyle, IntroductionComponent, DefinitionComponent],
+  imports: [RouterModule, NgIf, NgStyle, IntroductionComponent, DefinitionComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  animations: []
+  animations: [],
 })
 export class AppComponent {
-  testPage = 2;
-  page = {prevPage: this.testPage - 1, currPage: this.testPage};
+  testPage = 1;
+  page = { prevPage: this.testPage - 1, currPage: this.testPage };
 
   changePage(nextPage: boolean) {
     this.page.prevPage = this.page.currPage;
-    if(nextPage) this.page.currPage++;
+    if (nextPage) this.page.currPage++;
     else this.page.currPage--;
   }
 
   pagePosition(pageIndex: number) {
-    if(this.page.currPage > pageIndex) return '-100vw';
-    if(this.page.currPage < pageIndex) return '100vw';
+    if (this.page.currPage > pageIndex) return '-100vw';
+    if (this.page.currPage < pageIndex) return '100vw';
     return 0;
   }
-
 }
