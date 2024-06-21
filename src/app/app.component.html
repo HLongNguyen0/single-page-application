@@ -28,5 +28,14 @@
       opacity: page.currPage !== 3 ? 0 : 1
     }"
   ></app-features>
+  <app-frameworks
+    *ngIf="page.currPage >= 4 - 1 || page.currPage <= 4 + 1"
+    [page]="page"
+    [pageIndex]="4"
+    [ngStyle]="{
+      left: pagePosition(4),
+      opacity: page.currPage !== 4 ? 0 : 1
+    }"
+  ></app-frameworks>
 </div>
 <div class="page__change" [ngStyle]="{ right: 0 }" (click)="changePage(true)"></div>
