@@ -49,6 +49,8 @@
         height: 4vh;
         background-color: #fff;
 
+        text-align: center;
+
         cursor: pointer;
       }
     }
@@ -64,11 +66,10 @@
 
       &--blue {
         padding: 2vh;
-        background-color: blue;
+        background: linear-gradient(to bottom, blue, #4baac8);
       }
       &--red {
-        padding: 1vh;
-        background-color: red;
+        background: linear-gradient(to bottom, red, #ffcccb);
       }
     }
 
@@ -85,11 +86,11 @@
 
       &--blue {
         padding: 2vh;
-        background-color: blue;
+        background: linear-gradient(to bottom, blue, #4baac8);
       }
       &--red {
-        padding: 1vh;
-        background-color: red;
+        padding: 2vh;
+        background: linear-gradient(to bottom, red, #ffcccb);
       }
 
       &__title {

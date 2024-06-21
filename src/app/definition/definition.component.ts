@@ -35,9 +35,9 @@ export class DefinitionComponent {
   tpaLoader = false;
 
   spaText =
-    'A Single Page Application is a web application or website that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from a server.';
+    'Eine Single Page Application ist eine Webanwendung oder Website, die durch das dynamische Umschreiben der aktuellen Seite mit dem Benutzer interagiert, anstatt ganze neue Seiten vom Server zu laden';
   tpaText =
-    'In traditional web applications, navigating between different pages requires loading entire new pages. SPAs, however, load a single HTML page and dynamically update content as the user interacts with the app.';
+    'In traditionellen Webanwendungen erfordert die Navigation zwischen verschiedenen Seiten das Laden komplett neuer Seiten. SPAs hingegen laden eine einzige HTML-Seite und aktualisieren den Inhalt dynamisch, wenn der Benutzer mit der App interagiert.';
   colorPalete = [
     '#6df4e7',
     '#797bbf',

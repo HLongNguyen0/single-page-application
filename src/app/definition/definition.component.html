@@ -26,24 +26,27 @@
             </span>
           </div>
         </div>
-        <div class="difference__definition difference__definition--blue" [ngStyle]="{ opacity: example ? 0 : 1, 'z-index': example ? -1 : 1 }">
+        <div
+          class="difference__definition difference__definition--blue"
+          [ngStyle]="{ opacity: example ? 0 : 1, 'z-index': example ? -1 : 1, transform: example ? 'translateY(-10%)' : 'translateY(0)' }"
+        >
           <h2 class="difference__definition__title">Single Page Application</h2>
           <p class="difference__definition__text">{{ spaText }}</p>
         </div>
       </div>
     </div>
     <div class="difference__glasses2">
-      <div (click)="example = !example"></div>
+      <div (click)="example = !example">{{ example ? "Unterschied" : "Beispiel" }}</div>
     </div>
     <div class="difference__glasses">
       <div
         class="difference__elem difference__elem--red"
         [ngStyle]="{
           border:
-            '1vh solid ' +
-            (!example || tpaExample.header.current === 0 || tpaLoader
-              ? 'red'
-              : colorPalete[(tpaExample.header.current - 1) * 3 + tpaExample.img.current])
+            !example || tpaExample.header.current === 0 || tpaLoader
+              ? 'none'
+              : '1vh solid ' + colorPalete[(tpaExample.header.current - 1) * 3 + tpaExample.img.current],
+          padding: !example || tpaExample.header.current === 0 || tpaLoader ? '2vh' : '1vh'
         }"
       >
         <div class="difference__example difference__example--tpa" *ngIf="!tpaLoader">
@@ -56,7 +59,10 @@
             <span class="difference__example__text" (click)="onTextClick('tpa')">{{ tpaExample.img.text[tpaExample.img.current] }} </span>
           </div>
         </div>
-        <div class="difference__definition difference__definition--red" [ngStyle]="{ opacity: example ? 0 : 1, 'z-index': example ? -1 : 1 }">
+        <div
+          class="difference__definition difference__definition--red"
+          [ngStyle]="{ opacity: example ? 0 : 1, 'z-index': example ? -1 : 1, transform: example ? 'translateY(-10%)' : 'translateY(0)' }"
+        >
           <h2 class="difference__definition__title">Traditional Web Application</h2>
           <p class="difference__definition__text">{{ tpaText }}</p>
         </div>

@@ -3,17 +3,25 @@ import { RouterModule } from '@angular/router';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { NgIf, NgStyle } from '@angular/common';
 import { DefinitionComponent } from './definition/definition.component';
+import { FeaturesComponent } from './features/features.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, NgIf, NgStyle, IntroductionComponent, DefinitionComponent],
+  imports: [
+    RouterModule,
+    NgIf,
+    NgStyle,
+    IntroductionComponent,
+    DefinitionComponent,
+    FeaturesComponent,
+  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [],
 })
 export class AppComponent {
-  testPage = 1;
+  testPage = 3;
   page = { prevPage: this.testPage - 1, currPage: this.testPage };
 
   changePage(nextPage: boolean) {

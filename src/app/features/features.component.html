@@ -1,0 +1,43 @@
+<div
+  class="features"
+  [ngStyle]="{
+    transform: page.currPage === pageIndex ? 'scale(1)' : 'scale(0.95)',
+    transition: page.currPage !== pageIndex ? 'transform 200ms linear' : 'transform 200ms linear 600ms'
+  }"
+>
+  <div class="features__container">
+    <div class="features__elem">
+      <div class="features__display">
+        <img class="features__display__client" src="svg/client.svg" alt="client" />
+        <img class="features__display__server" src="svg/server.svg" alt="server" />
+        <div class="features__display__request"><img class="features__display__file" src="svg/jsonFile.svg" alt="file" /></div>
+      </div>
+      <div class="features__info">
+        <h2 class="features__title magic">{{ text[0].title }}</h2>
+        <div class="features__text">{{ text[0].text }}</div>
+      </div>
+    </div>
+    <div class="features__elem">
+      <div class="features__display">
+        <img class="features__display__settings1" src="svg/settings1.svg" alt="settings" />
+        <img class="features__display__settings2" src="svg/settings2.svg" alt="settings" />
+      </div>
+      <div class="features__info">
+        <h2 class="features__title magic">{{ text[1].title }}</h2>
+        <div class="features__text">{{ text[1].text }}</div>
+      </div>
+    </div>
+    <div class="features__elem">
+      <div class="features__display">
+        <div class="features__display__cube features__display__cube1"></div>
+        <div class="features__display__cube features__display__cube2"></div>
+        <div class="features__display__cube features__display__cube3"></div>
+        <div class="features__display__cube features__display__cube4"></div>
+      </div>
+      <div class="features__info">
+        <h2 class="features__title magic">{{ text[2].title }}</h2>
+        <div class="features__text">{{ text[2].text }}</div>
+      </div>
+    </div>
+  </div>
+</div>
