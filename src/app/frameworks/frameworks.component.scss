@@ -7,6 +7,8 @@
   width: 100vw;
   height: 100vh;
 
+  overflow: hidden;
+
   transition: left 400ms linear 200ms, opacity 150ms linear 350ms;
 
   .frameworks {
@@ -20,6 +22,24 @@
     background-color: #000;
 
     transition: transform 200ms linear;
+
+    &__spa-icon {
+      position: absolute;
+      left: 8vw;
+
+      width: 20vh;
+      height: 20vh;
+
+      &1 {
+        top: 20vh;
+      }
+      &2 {
+        top: 50vh;
+      }
+      &3 {
+        top: 80vh;
+      }
+    }
 
     &__container {
       display: flex;

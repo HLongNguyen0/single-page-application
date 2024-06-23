@@ -5,5 +5,35 @@
     transition: page.currPage !== pageIndex ? 'transform 200ms linear' : 'transform 200ms linear 600ms'
   }"
 >
+  <img
+    class="frameworks__spa-icon frameworks__spa-icon1"
+    [ngStyle]="{
+      opacity: page.currPage === 4 ? 1 : 0,
+      transform: page.currPage === 4 ? 'translate(-50%, -50%)' : 'translate(-25vw, -50%)',
+      transition: page.currPage === 4 ? 'transform 1500ms ease-in-out 1000ms' : 'transform 0ms ease-in-out 500ms'
+    }"
+    src="svg/react.svg"
+    alt="react"
+  />
+  <img
+    class="frameworks__spa-icon frameworks__spa-icon2"
+    [ngStyle]="{
+      opacity: page.currPage === 4 ? 1 : 0,
+      transform: page.currPage === 4 ? 'translate(-50%, -50%)' : 'translate(-25vw, -50%)',
+      transition: page.currPage === 4 ? 'transform 1500ms ease-in-out 1250ms' : 'transform 0ms ease-in-out 500ms'
+    }"
+    src="svg/angular.svg"
+    alt="angular"
+  />
+  <img
+    class="frameworks__spa-icon frameworks__spa-icon3"
+    [ngStyle]="{
+      opacity: page.currPage === 4 ? 1 : 0,
+      transform: page.currPage === 4 ? 'translate(-50%, -50%)' : 'translate(-25vw, -50%)',
+      transition: page.currPage === 4 ? 'transform 1500ms ease-in-out 1500ms' : 'transform 0ms ease-in-out 500ms'
+    }"
+    src="svg/vue.svg"
+    alt="vue"
+  />
   <div class="frameworks__container"></div>
 </div>
