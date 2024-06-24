@@ -35,5 +35,15 @@
     src="svg/vue.svg"
     alt="vue"
   />
-  <div class="frameworks__container"></div>
+  <div class="frameworks__container">
+    <h2 class="frameworks__title magic">{{title}}</h2>
+    <div class="frameworks__list">
+      <div class="frameworks__elem" *ngFor="let item of text">
+        <div class="frameworks__elem__container">
+          <h3 class="frameworks__elem__title">{{item.title}}</h3>
+          <span class="frameworks__elem__text">{{item.text}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

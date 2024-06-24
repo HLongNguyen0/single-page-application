@@ -5,6 +5,7 @@ import { NgIf, NgStyle } from '@angular/common';
 import { DefinitionComponent } from './definition/definition.component';
 import { FeaturesComponent } from './features/features.component';
 import { FrameworksComponent } from './frameworks/frameworks.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @Component({
   standalone: true,
@@ -16,6 +17,7 @@ import { FrameworksComponent } from './frameworks/frameworks.component';
     DefinitionComponent,
     FeaturesComponent,
     FrameworksComponent,
+    SummaryComponent
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,7 +25,7 @@ import { FrameworksComponent } from './frameworks/frameworks.component';
   animations: [],
 })
 export class AppComponent {
-  testPage = 4;
+  testPage = 1;
   page = { prevPage: this.testPage - 1, currPage: this.testPage };
 
   changePage(nextPage: boolean) {

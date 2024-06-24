@@ -286,15 +286,17 @@
       }
     }
 
+    &__info {
+      padding: 0 2vh;
+    }
     &__title {
       margin: 1vh 0;
 
       text-align: center;
-      font-size: 3vh;
+      font-size: 2vh;
     }
     &__text {
-      padding: 2vh;
-      font-size: 2vh;
+      font-size: 1.5vh;
     }
   }
 }

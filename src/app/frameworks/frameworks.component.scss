@@ -42,7 +42,41 @@
     }
 
     &__container {
+      width: 50vw;
+      color: #fff;
+    }
+
+    &__title {
+      font-size: 4vh;
+      margin-bottom: 2vh;
+    }
+
+    &__list {
       display: flex;
+      flex-direction: column;
+
+      gap: 2vh;
+    }
+
+    &__elem {
+      padding: 0.2vh;
+      border-radius: 2vh;
+
+      animation: background-pan 2000ms linear infinite;
+      background: linear-gradient(to right, #2565ae, #3c99dc, #66d3fa, #2565ae);
+      background-size: 200%;
+
+      &__container {
+        padding: 2vh;
+        background-color: #000;
+      }
+      &__title {
+        margin-bottom: 1vh;
+        font-size: 2vh;
+      }
+      &__text {
+        font-size: 1.5vh;
+      }
     }
   }
 }
